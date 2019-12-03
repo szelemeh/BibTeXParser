@@ -1,20 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="" />
+    <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Booklet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Conference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/EntryType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Inbook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Incollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Inproceedings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Manual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/MasterThesis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Misc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/PhdThesis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entries/Proceedings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parsers/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UQTbBBDIj6DLdJMkkAL9dz5iVO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,11 +79,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575287887467</updated>
-      <workItem from="1575287892891" duration="87000" />
+      <workItem from="1575287892891" duration="4456000" />
+      <workItem from="1575393522237" duration="57000" />
+      <workItem from="1575405753592" duration="9114000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
