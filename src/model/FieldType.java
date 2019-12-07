@@ -1,0 +1,30 @@
+package model;
+
+public enum FieldType {
+    ADDRES,
+    ANNOTE,
+    AUTHOR,
+    BOOKTITLE,
+    CHAPTER,
+    CROSSREF,
+    DOI,
+    EDITION,
+    EDITOR,
+    HOWPUBLISHED,
+    INSTITUTION,
+    JOURNAL,
+    KEY,
+    MONTH,
+    NOTE,
+    NUMBER,
+    ORGANIZATION,
+    PAGES,
+    PUBLISHER,
+    SCHOOL,
+    SERIES,
+    TITLE,
+    TYPE,
+    URL,
+    VOLUME,
+    YEAR;
+}

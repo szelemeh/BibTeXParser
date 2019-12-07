@@ -92,23 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArticleTest.addField_ExistingField_Passes">
-    <configuration name="ArticleTest.addField_ExistingField_Passes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BibTexParser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.ArticleTest" />
-      <option name="METHOD_NAME" value="addField_ExistingField_Passes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="ArticleTest.addField_NotExistingField_ExceptionIsThrown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibTexParser" />
       <extension name="coverage">
@@ -127,7 +111,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArticleTest.addField_ExistingField_Passes" />
         <item itemvalue="JUnit.ArticleTest.addField_NotExistingField_ExceptionIsThrown" />
       </list>
     </recent_temporary>
@@ -149,7 +132,7 @@
       <workItem from="1575583351703" duration="5551000" />
       <workItem from="1575618509907" duration="34000" />
       <workItem from="1575664664227" duration="968000" />
-      <workItem from="1575722060169" duration="8699000" />
+      <workItem from="1575722060169" duration="8445000" />
     </task>
     <servers />
   </component>

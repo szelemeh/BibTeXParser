@@ -1,6 +1,6 @@
-import entries.Entry;
-import entries.EntryType;
-import entries.FieldType;
+import model.Entry;
+import model.EntryType;
+import model.FieldType;
 import parsers.Parser;
 
 import java.util.ArrayList;
