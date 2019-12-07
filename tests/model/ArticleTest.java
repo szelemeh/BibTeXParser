@@ -21,4 +21,10 @@ public class ArticleTest {
     public void addField_ExistingField_Passes() {
         article.addField(FieldType.AUTHOR, "");
     }
+
+    @Test
+    public void areRequiredFieldPresent_NotPresent_False() {
+        article.addField(FieldType.AUTHOR, "");
+        assertFalse(article.areRequiredFieldsPresent());
+    }
 }

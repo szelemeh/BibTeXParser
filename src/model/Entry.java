@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
+import java.util.Objects;
 
 public abstract class Entry {
     protected String key;
@@ -15,6 +16,7 @@ public abstract class Entry {
         fieldTypeList = new FieldTypeList();
     }
     public void addField(FieldType type, String value) {
+        if(fields.containsKey(type)) throw new IllegalArgumentException("The field has already been added!");
         checkValidityOfInputField(type);
         fields.put(type, value);
     }
@@ -41,4 +43,21 @@ public abstract class Entry {
         this.key = key;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Entry entry = (Entry) o;
+        return Objects.equals(key, entry.key) &&
+                type == entry.type;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(key, type);
+    }
+
+    public EnumMap<FieldType, String> getFields() {
+        return fields;
+    }
 }
