@@ -9,7 +9,7 @@ public class EntryFactoryTest {
 
     @Test
     public void createEntry() {
-        Entry entry = EntryFactory.createEntry(EntryType.ARTICLE);
+        Entry entry = EntryFactory.create(EntryType.ARTICLE);
         assertEquals(entry, new Article());
     }
 }

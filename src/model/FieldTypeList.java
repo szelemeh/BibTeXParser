@@ -10,6 +10,22 @@ public class FieldTypeList implements IFieldTypeList {
     private ArrayList<FieldType> singleOptional;
     private ArrayList<FieldPair> duplexOptional;
 
+    public ArrayList<FieldType> getSingleRequired() {
+        return singleRequired;
+    }
+
+    public ArrayList<FieldPair> getDuplexRequired() {
+        return duplexRequired;
+    }
+
+    public ArrayList<FieldType> getSingleOptional() {
+        return singleOptional;
+    }
+
+    public ArrayList<FieldPair> getDuplexOptional() {
+        return duplexOptional;
+    }
+
     public FieldTypeList() {
         this.singleRequired = new ArrayList<>();
         this.duplexRequired = new ArrayList<>();

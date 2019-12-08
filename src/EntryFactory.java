@@ -1,7 +1,7 @@
 import model.*;
 
 public class EntryFactory {
-    public static Entry createEntry(EntryType type) {
+    public static Entry create(EntryType type) {
         switch(type) {
             case ARTICLE:
                 return new Article();

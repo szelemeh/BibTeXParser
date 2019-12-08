@@ -60,4 +60,13 @@ public abstract class Entry {
     public EnumMap<FieldType, String> getFields() {
         return fields;
     }
+
+    public void fillItself() {
+        this.setKey("mock-key");
+        ArrayList<FieldType> singles = fieldTypeList.getSingleRequired();
+        singles.addAll(fieldTypeList.getSingleOptional());
+        for(FieldType type: singles) {
+            this.addField(type, "mock");
+        }
+    }
 }

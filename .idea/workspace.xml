@@ -2,35 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/EntryFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/model/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/Document.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/ArticleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/ArticleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Booklet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Conference.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/EntryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Inbook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Incollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Inproceedings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Manual.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/MasterThesis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Misc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/PhdThesis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Proceedings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/TechReport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Unpublished.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Entry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/model/ArticleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model/ArticleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/model/EntryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FieldTypeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FieldTypeList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +44,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tests" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -187,7 +165,8 @@
       <workItem from="1575583351703" duration="5551000" />
       <workItem from="1575618509907" duration="34000" />
       <workItem from="1575664664227" duration="968000" />
-      <workItem from="1575722060169" duration="15520000" />
+      <workItem from="1575722060169" duration="16266000" />
+      <workItem from="1575836925520" duration="1361000" />
     </task>
     <servers />
   </component>

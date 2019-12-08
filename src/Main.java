@@ -1,19 +1,16 @@
-import model.Article;
-import model.Book;
-import model.FieldType;
+import model.*;
+
+import java.util.Map;
 
 public class Main {
+
     public static void main(String[] args) {
-        Book book = new Book();
-        book.setKey("kitty");
-        book.addField(FieldType.AUTHOR, "Stas and Kuba and Nazar");
-        book.addField(FieldType.TITLE, "Monastyrski Drama");
-        book.addField(FieldType.PUBLISHER, "Dutka");
-        book.addField(FieldType.YEAR, "2019");
-        book.addField(FieldType.NOTE, "Samuel is also in there");
-
-        Printer printer = new Printer();
-        printer.printEntry(book);
-
+        Document doc = new Document("//");
+        for(EntryType type: EntryType.values()) {
+            Entry entry = EntryFactory.create(type);
+            entry.fillItself();
+            doc.put(entry);
+        }
+        doc.printAll();
     }
 }

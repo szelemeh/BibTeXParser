@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EntryFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/FieldPair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/FieldTypeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/IFieldTypeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/model/ArticleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/model/EntryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BibTexParser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BibTexParser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Booklet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Booklet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Conference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Conference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Entry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/EntryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/EntryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/FieldType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FieldType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Inbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Inbook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Incollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Incollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Inproceedings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Inproceedings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Manual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Manual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/MasterThesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MasterThesis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Misc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Misc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/PhdThesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PhdThesis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Proceedings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Proceedings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/TechReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TechReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entries/Unpublished.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Unpublished.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Entry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FieldTypeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FieldTypeList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -63,14 +42,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/model" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tests" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
       <recent name="model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -92,8 +73,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="ArticleTest.addField_NotExistingField_ExceptionIsThrown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="BibTexParser" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibTexParser" />
       <extension name="coverage">
         <pattern>
@@ -103,7 +91,48 @@
       </extension>
       <option name="PACKAGE_NAME" value="model" />
       <option name="MAIN_CLASS_NAME" value="model.ArticleTest" />
-      <option name="METHOD_NAME" value="addField_NotExistingField_ExceptionIsThrown" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest.addField_TwoArgumentsOfPair_ExceptionIsThrown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibTexParser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.BookTest" />
+      <option name="METHOD_NAME" value="addField_TwoArgumentsOfPair_ExceptionIsThrown" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest.areRequiredFieldPresent_NotPresent_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibTexParser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.BookTest" />
+      <option name="METHOD_NAME" value="areRequiredFieldPresent_NotPresent_False" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryFactoryTest.createEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BibTexParser" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EntryFactoryTest" />
+      <option name="METHOD_NAME" value="createEntry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,7 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArticleTest.addField_NotExistingField_ExceptionIsThrown" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.EntryFactoryTest.createEntry" />
+        <item itemvalue="JUnit.BookTest.areRequiredFieldPresent_NotPresent_False" />
+        <item itemvalue="JUnit.ArticleTest" />
+        <item itemvalue="JUnit.BookTest.addField_TwoArgumentsOfPair_ExceptionIsThrown" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +165,8 @@
       <workItem from="1575583351703" duration="5551000" />
       <workItem from="1575618509907" duration="34000" />
       <workItem from="1575664664227" duration="968000" />
-      <workItem from="1575722060169" duration="8445000" />
+      <workItem from="1575722060169" duration="16266000" />
+      <workItem from="1575836925520" duration="1361000" />
     </task>
     <servers />
   </component>
