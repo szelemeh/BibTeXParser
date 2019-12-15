@@ -27,7 +27,11 @@ public class Document {
     }
 
     public void printEntriesByField(FieldType fieldType, String value) {
-        // TODO: 02-Dec-19 write function
+        if(fieldType == FieldType.AUTHOR || fieldType == FieldType.EDITOR) printEntriesByName(value);
+    }
+
+    private void printEntriesByName(String lastName) {
+
     }
 
     public void printEntriesByEntryType(EntryType entryType) {

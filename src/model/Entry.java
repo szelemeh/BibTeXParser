@@ -5,7 +5,7 @@ import java.util.EnumMap;
 import java.util.Objects;
 
 public abstract class Entry {
-    protected String key;
+    protected String key = null; // TODO: 09-Dec-19 change so it will take key from input fields if possible
     public EntryType type;
     protected EnumMap<FieldType, String> fields;
     protected FieldTypeList fieldTypeList;
@@ -59,6 +59,10 @@ public abstract class Entry {
 
     public EnumMap<FieldType, String> getFields() {
         return fields;
+    }
+
+    public Boolean doesFieldTypeExist(FieldType type) {
+        return fieldTypeList.doesFieldExist(type);
     }
 
     public void fillItself() {
