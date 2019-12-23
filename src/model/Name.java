@@ -66,4 +66,14 @@ public class Name {
     public int hashCode() {
         return Objects.hash(firstName, lastName, von, jr);
     }
+
+    @Override
+    public String toString() {
+        return "Name{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", von='" + von + '\'' +
+                ", jr='" + jr + '\'' +
+                '}';
+    }
 }

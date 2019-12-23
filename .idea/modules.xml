@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BibTexParser.iml" filepath="$PROJECT_DIR$/BibTexParser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BibTeXParser.iml" filepath="$PROJECT_DIR$/BibTeXParser.iml" />
     </modules>
   </component>
 </project>

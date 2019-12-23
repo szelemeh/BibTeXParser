@@ -5,7 +5,9 @@ import java.util.EnumMap;
 import java.util.Objects;
 
 public abstract class Entry {
-    protected String key = null; // TODO: 09-Dec-19 change so it will take key from input fields if possible
+    protected String key = null;
+    protected String crossRef = null;
+
     public EntryType type;
     protected EnumMap<FieldType, String> fields;
     protected FieldTypeList fieldTypeList;
@@ -31,7 +33,8 @@ public abstract class Entry {
         }
     }
 
-    protected Boolean areRequiredFieldsPresent() {
+    protected Boolean areRequiredFieldsPresent(Entry crossReferenced) {
+        if(crossReferenced != null)return fieldTypeList.areRequiredFieldsPresentIn(fields, crossReferenced);
         return fieldTypeList.areRequiredFieldsPresentIn(fields);
     }
 
@@ -41,6 +44,14 @@ public abstract class Entry {
 
     public void setKey(String key) {
         this.key = key;
+    }
+
+    public String getCrossRef() {
+        return crossRef;
+    }
+
+    public void setCrossRef(String crossRef) {
+        this.crossRef = crossRef;
     }
 
     @Override
@@ -72,5 +83,11 @@ public abstract class Entry {
         for(FieldType type: singles) {
             this.addField(type, "mock");
         }
+    }
+
+    public String getNameField() {
+        if(fields.get(FieldType.AUTHOR) != null) return fields.get(FieldType.AUTHOR);
+        if(fields.get(FieldType.EDITOR) != null) return fields.get(FieldType.EDITOR);
+        return null;
     }
 }

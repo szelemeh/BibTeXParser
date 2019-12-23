@@ -17,4 +17,6 @@ public interface IFieldTypeList {
     public FieldType getPartnerOfField(FieldType type);
 
     public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields);
+
+    public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields, Entry crossReferenced);
 }

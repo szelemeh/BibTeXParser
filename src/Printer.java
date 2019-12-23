@@ -1,6 +1,8 @@
 import model.Entry;
 import model.FieldType;
 
+import java.util.ArrayList;
+
 
 public class Printer {
     private String leftAlignFormat = "| %-22s | %-60s |%n";
@@ -30,5 +32,10 @@ public class Printer {
         full.append(footer);
 
         System.out.println(full);
+    }
+    public void printAll(ArrayList<Entry> entries){
+        for (Entry entry: entries) {
+            printEntry(entry);
+        }
     }
 }

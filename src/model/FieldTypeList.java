@@ -78,4 +78,16 @@ public class FieldTypeList implements IFieldTypeList {
         }
         return true;
     }
+
+    public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields, Entry crossReferenced) {
+        EnumMap<FieldType, String> crossFields = crossReferenced.fields;
+        for(FieldType type: singleRequired){
+            if(!fields.containsKey(type) && !crossFields.containsKey(type))return false;
+        }
+        for(FieldPair pair: duplexRequired){
+            if((!fields.containsKey(pair.first) && !fields.containsKey(pair.second))
+                    && (!crossFields.containsKey(pair.first) && !crossFields.containsKey(pair.second)))return false;
+        }
+        return true;
+    }
 }

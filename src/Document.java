@@ -11,12 +11,21 @@ public class Document {
     private final String filePath;
     private Parser parser;
     private Printer printer;
+    private User user = new User();
 
     public Document(String filePath) {
         this.filePath = filePath;
         parser = new Parser(filePath);
         printer = new Printer();
         entries = new EnumMap<EntryType, ArrayList<Entry>>(EntryType.class);
+        fillEntries();
+    }
+
+    private void fillEntries() {
+        ArrayList<Entry> allEntries = parser.getEntries();
+        for (Entry entry: allEntries) {
+            put(entry);
+        }
     }
 
     public void put(Entry entry) {
@@ -27,11 +36,27 @@ public class Document {
     }
 
     public void printEntriesByField(FieldType fieldType, String value) {
-        if(fieldType == FieldType.AUTHOR || fieldType == FieldType.EDITOR) printEntriesByName(value);
+        if(fieldType == FieldType.AUTHOR || fieldType == FieldType.EDITOR) printEntriesByLastName(value);
+
+        //place to implement function for other fields
     }
 
-    private void printEntriesByName(String lastName) {
-
+    private void printEntriesByLastName(String searchLastName) {
+        ArrayList<ArrayList<Entry>> allArrayLists = new ArrayList<>(this.entries.values());
+        ArrayList<Entry> toPrint = new ArrayList<>();
+        for (ArrayList<Entry> array: allArrayLists) {
+            for (Entry entry: array) {
+                String fieldValue = entry.getNameField();
+                if(fieldValue != null) {
+                    ArrayList<String> lastNames = parser.getLastNames(fieldValue);
+                    for(String lastName: lastNames) {
+                        if(lastName.contains(searchLastName))toPrint.add(entry);
+                    }
+                }
+            }
+        }
+        if(toPrint.isEmpty())user.sendMessage("There are no entries with author or editor last name "+searchLastName);
+        else printer.printAll(toPrint);
     }
 
     public void printEntriesByEntryType(EntryType entryType) {
@@ -47,6 +72,19 @@ public class Document {
             }
         }
     }
+
+    private Entry getCrossReferencedEntry(String crossRef) {
+        ArrayList<ArrayList<Entry>> allArrayLists = new ArrayList<>(this.entries.values());
+
+        for (ArrayList<Entry> array: allArrayLists) {
+            for (Entry entry: array) {
+                if(crossRef.equals(entry.getKey()))return entry;
+            }
+        }
+        return null;
+    }
+
+
 
 }
 
