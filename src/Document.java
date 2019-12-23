@@ -2,6 +2,7 @@ import model.Entry;
 import model.EntryType;
 import model.FieldType;
 import parsers.Parser;
+import parsers.User;
 
 import java.util.ArrayList;
 import java.util.EnumMap;

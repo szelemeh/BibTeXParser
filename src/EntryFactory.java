@@ -19,8 +19,8 @@ public class EntryFactory {
                 return new Inproceedings();
             case MANUAL:
                 return new Manual();
-            case MASTERTHESIS:
-                return new MasterThesis();
+            case MASTERSTHESIS:
+                return new MastersThesis();
             case MISC:
                 return new Misc();
             case PHDTHESIS:

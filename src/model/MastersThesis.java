@@ -5,9 +5,9 @@ import java.util.Arrays;
 
 //Required fields: author, title, school, year
 //Optional fields: type, address, month, note, key
-public class MasterThesis extends Entry {
-    public MasterThesis() {
-        super(EntryType.MASTERTHESIS);
+public class MastersThesis extends Entry {
+    public MastersThesis() {
+        super(EntryType.MASTERSTHESIS);
         fieldTypeList.defineSingleRequiredFields(
                 FieldType.AUTHOR,
                 FieldType.TITLE,
