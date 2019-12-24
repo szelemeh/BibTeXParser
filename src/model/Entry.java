@@ -13,7 +13,6 @@ import java.util.Objects;
 public abstract class Entry {
     protected String key = null; //first item in a BibTeX entry, not a part of any field
     protected String crossRef = null; //the key of the cross-referenced entry
-
     public EntryType type; // type of the entry
     protected EnumMap<FieldType, String> fields; //EnumMap of all the fields
     protected FieldTypeList fieldTypeList; // List of required and optional fields

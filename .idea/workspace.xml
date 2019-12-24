@@ -2,36 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/NoSuchEntryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/parsers/LexerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/resourses/example.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/ParsingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/StringNotDefinedException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/Document.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/EntryFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/EntryFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/EntryFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/EntryFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/EntryType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/EntryType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/MasterThesis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/NameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/NameParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/Document.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/EntryType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/EntryType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/FieldTypeList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/IFieldTypeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/MastersThesis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Parser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Entry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/EntryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/EntryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MasterThesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MastersThesis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsers/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/NameParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/NameParser.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +191,8 @@
       <workItem from="1576497360267" duration="4403000" />
       <workItem from="1576768802635" duration="28000" />
       <workItem from="1576941115680" duration="449000" />
-      <workItem from="1577092109741" duration="28151000" />
+      <workItem from="1577092109741" duration="28447000" />
+      <workItem from="1577207608622" duration="11190000" />
     </task>
     <servers />
   </component>
@@ -226,7 +217,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/parsers/Lexer.java</url>
-          <line>32</line>
+          <line>34</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
