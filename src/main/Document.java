@@ -1,8 +1,9 @@
+package main;
+
 import model.Entry;
 import model.EntryType;
 import model.FieldType;
 import parsers.Parser;
-import parsers.User;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
@@ -12,7 +13,7 @@ public class Document {
     private final String filePath;
     private Parser parser;
     private Printer printer;
-    private User user = new User();
+    private User user = User.getUser();
 
     public Document(String filePath) {
         this.filePath = filePath;
@@ -25,6 +26,9 @@ public class Document {
     private void fillEntries() {
         ArrayList<Entry> allEntries = parser.getEntries();
         for (Entry entry: allEntries) {
+            if(!entry.areRequiredFieldsPresent(getCrossReferencedEntry(entry.getCrossRef()))){
+                user.sendMessage(entry.type+":"+entry.getKey()+" is missing some required fields!");
+            }
             put(entry);
         }
     }
@@ -39,7 +43,7 @@ public class Document {
     public void printEntriesByField(FieldType fieldType, String value) {
         if(fieldType == FieldType.AUTHOR || fieldType == FieldType.EDITOR) printEntriesByLastName(value);
 
-        //place to implement function for other fields
+        //here to implement function for other fields
     }
 
     private void printEntriesByLastName(String searchLastName) {
@@ -75,6 +79,7 @@ public class Document {
     }
 
     private Entry getCrossReferencedEntry(String crossRef) {
+        if (crossRef == null) return null;
         ArrayList<ArrayList<Entry>> allArrayLists = new ArrayList<>(this.entries.values());
 
         for (ArrayList<Entry> array: allArrayLists) {

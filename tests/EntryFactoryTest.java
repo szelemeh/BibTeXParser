@@ -1,3 +1,4 @@
+import main.EntryFactory;
 import model.Article;
 import model.Entry;
 import model.EntryType;

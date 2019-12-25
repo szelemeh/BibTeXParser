@@ -2,29 +2,52 @@ package parsers;
 
 import Exceptions.ParsingException;
 import Exceptions.StringNotDefinedException;
+import main.EntryFactory;
 import model.Entry;
 import model.EntryType;
+import model.FieldType;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-
+/**
+ * Lexer is one of the parsing classes.
+ * Its job is to build entries from the content of <i>.bib</i> file.
+ * Also this class substitutes all the string variables with
+ * their values in these entries
+ */
 public class Lexer {
     private String fileContent;
     private HashMap <String, String> strings;
-    private User user;
     private ArrayList<Entry> entries;
 
+    /**
+     * gets entries
+     * @return list of entries built from fileContent
+     */
+    public ArrayList<Entry> getEntries() {
+        return entries;
+    }
+
+    /**
+     * Constructor that takes one argument
+     * @param fileContent is content of the file to be parsed
+     */
     public Lexer(String fileContent) {
         this.fileContent = fileContent;
         strings = new HashMap<>();
-        user = new User();
         entries = new ArrayList<>();
+        buildEntries();
     }
 
+    /**
+     * Method that is called on creation of instance of this class.
+     * It parses fileContent to fill entries.
+     */
     public void buildEntries() {
+        if (fileContent == null)return;
+
         fileContent = fileContent.substring(fileContent.indexOf("@"));
         StringTokenizer mainTokenizer = new StringTokenizer(fileContent, "@");
         while (mainTokenizer.hasMoreTokens()) {
@@ -45,7 +68,7 @@ public class Lexer {
                  entryType = EntryType.valueOf(entryTypeName);
              }
              catch (IllegalArgumentException ex) {
-                 user.sendMessage("There is no entry type for "+entryTypeName);
+                 ex.printStackTrace();
              }
              if(entryType != null) {
                 switch (entryType) {
@@ -63,17 +86,26 @@ public class Lexer {
         }
     }
 
+    /**
+     * Method that builds a BibTeX string and puts it in strings hash map.
+     * @param rawString is text with such format: [nameOfStringVariable = stringValue].
+     *                  String value may consist of several
+     *                  parts(expressions in quotes or nameOfStringVariable of other strings)
+     *                  that are concatenated using # symbol.
+     */
     private void buildString(String rawString) {
         StringBuilder newStringBuilder = new StringBuilder();
         int start = fromLeftFirstIndexOf(rawString, '{');
         int end = fromRightFirstIndexOf(rawString, '}');
 
-        if (start == -1 || end == -1) throw new IllegalArgumentException("The String must by enclosed in curly braces {}");
+        if (start == -1 || end == -1) throw new IllegalArgumentException("A String must by enclosed in curly braces {}");
 
         rawString = rawString.substring(start+1, end); //getting rid of entry name and outer braces
 
         StringTokenizer tokenizer = new StringTokenizer(rawString, "=");
-        String name = tokenizer.nextToken().replaceAll("\\s", "");
+        String name = tokenizer.nextToken()
+                .replaceAll("\\s", "")
+                .toLowerCase();
         String rawValue = tokenizer.nextToken();
 
         if(name.isBlank() || rawValue.isEmpty()) throw new IllegalArgumentException("Name and value of String must not be blank!");
@@ -88,13 +120,13 @@ public class Lexer {
         if(value != null)strings.put(name, value);
 
 
-        System.out.println(name+" "+value);
     }
 
     /**
      * Method concatenates a BibTeX expression, that uses '#' to concatenate strings
      * with values of fields or strings with strings.
      * String variables are substituted with their values.
+     *
      * @param rawValue is expression with strings, #'s and text in quotes("")
      * @return concatenated string.
      */
@@ -115,11 +147,11 @@ public class Lexer {
             }
             else {
                 part = part.replaceAll("\\s", ""); //getting rid of whitespaces
-                String key = part;
+                String key = part.toLowerCase();
                 String valueOfStrVar = strings.get(key);
 
                 if(valueOfStrVar == null)
-                    throw new StringNotDefinedException("String that is being used in concatenation is not defined!");
+                    throw new StringNotDefinedException("String "+part+" that is being used in concatenation is not defined!");
 
                 valueBuilder.append(valueOfStrVar);
             }
@@ -127,8 +159,78 @@ public class Lexer {
         return valueBuilder.toString();
     }
 
+    /**
+     * Method builds an entry from rawEntry input string
+     * and adds it to entries ArrayList
+     * @param type is an instance of enum EntryType
+     * @see EntryType
+     * @param rawEntry is text of BibTeX entry in format: [NameOfEntry{[key and fields, separated by commas]}]
+     */
     private void buildEntry(EntryType type, String rawEntry) {
-        System.out.println("building entry");
+
+        Entry entry = EntryFactory.create(type);
+        int start = fromLeftFirstIndexOf(rawEntry, '{');
+        int end = fromRightFirstIndexOf(rawEntry, '}');
+
+        if (start == -1 || end == -1) throw new IllegalArgumentException("An Entry must by enclosed in curly braces {}");
+
+        rawEntry = rawEntry.substring(start+1, end); //getting rid of entry name and outer braces
+
+        int i = fromLeftFirstIndexOf(rawEntry, ',');
+
+        assert entry != null;
+        entry.setKey(rawEntry.substring(0, i)
+                .replaceAll("\\s", ""));
+
+        rawEntry = rawEntry.substring(i+1);
+
+        StringTokenizer fields = new StringTokenizer(rawEntry, ",");
+
+        while (fields.hasMoreTokens()) {
+            String field = fields.nextToken();
+
+            if(field.isBlank())break;
+
+            StringTokenizer typeAndValue = new StringTokenizer(field, "=");
+            String fieldTypeName = typeAndValue.nextToken()
+                    .replaceAll("\\s", "")
+                    .toUpperCase();
+
+            FieldType fieldType = null;
+            try {
+                fieldType = FieldType.valueOf(fieldTypeName);
+            }
+            catch (IllegalArgumentException ex) {
+                ex.printStackTrace();
+            }
+
+            if(fieldType != null) {
+                String rawValue = typeAndValue.nextToken();
+
+                if (rawValue.contains("#") || !rawValue.contains("\"")) {
+                    try {
+                        rawValue = concatenate(rawValue);
+                    } catch (ParsingException | StringNotDefinedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    int l = rawValue.length();
+
+                    // getting rid of quotes("")
+                    if(rawValue.contains("\"")) {
+                        if(l>2) rawValue = rawValue.substring(2, rawValue.length()-1);
+                        else rawValue = rawValue.substring(1, rawValue.length()-1);
+                    }
+                }
+                String value = rawValue;
+                if(fieldType == FieldType.CROSSREF)entry.setCrossRef(value);
+                else entry.addField(fieldType, value);
+
+            }
+        }
+        entries.add(entry);
+
     }
 
     /**
@@ -162,9 +264,5 @@ public class Lexer {
         for (j=s.length()-1; j>=0 && s.charAt(j) == ' '; j--);
         return s.substring(i,j+1);
     }
-
-
-
-
 
 }

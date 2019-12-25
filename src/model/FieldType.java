@@ -1,7 +1,7 @@
 package model;
 
 public enum FieldType {
-    ADDRES,
+    ADDRESS,
     ANNOTE,
     AUTHOR,
     BOOKTITLE,

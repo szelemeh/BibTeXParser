@@ -1,8 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 //Required fields: author, title, booktitle, publisher, year
 //Optional fields: editor, volume/number, series, type, chapter, pages, address, edition, month, note, key
 public class Incollection extends Entry{
@@ -21,7 +18,7 @@ public class Incollection extends Entry{
                 FieldType.TYPE,
                 FieldType.CHAPTER,
                 FieldType.PAGES,
-                FieldType.ADDRES,
+                FieldType.ADDRESS,
                 FieldType.EDITION,
                 FieldType.MONTH,
                 FieldType.NOTE,

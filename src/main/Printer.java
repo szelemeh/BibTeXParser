@@ -1,3 +1,5 @@
+package main;
+
 import model.Entry;
 import model.FieldType;
 

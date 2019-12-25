@@ -1,8 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 //Required fields: title, year
 //Optional fields: editor, volume/number, series, address, month, publisher, organization, note, key
 public class Proceedings extends Entry {
@@ -15,7 +12,7 @@ public class Proceedings extends Entry {
         fieldTypeList.defineSingleOptionalFields(
                 FieldType.EDITOR,
                 FieldType.SERIES,
-                FieldType.ADDRES,
+                FieldType.ADDRESS,
                 FieldType.MONTH,
                 FieldType.PUBLISHER,
                 FieldType.ORGANIZATION,

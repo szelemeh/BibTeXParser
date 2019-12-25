@@ -1,8 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 ////Required fields: author, title, booktitle, year
 ////Optional fields: editor, volume/number, series, pages, address, month, organization, publisher, note, key
 public class Inproceedings extends Entry {
@@ -17,7 +14,7 @@ public class Inproceedings extends Entry {
                 FieldType.EDITOR,
                 FieldType.SERIES,
                 FieldType.PAGES,
-                FieldType.ADDRES,
+                FieldType.ADDRESS,
                 FieldType.MONTH,
                 FieldType.ORGANIZATION,
                 FieldType.PUBLISHER,

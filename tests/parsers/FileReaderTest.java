@@ -11,9 +11,9 @@ public class FileReaderTest {
     @Test
     public void getContent() {
         String path = "tests/resourses/inputTestFile.txt";
-        FileToString reader = new FileToString();
+        FileToString reader = new FileToString(path);
         try {
-            assertEquals("hello world\nwow, it works\n", reader.getContent(path));
+            assertEquals("hello world\nwow, it works\n", reader.getContent());
         } catch (IOException e) {
             e.printStackTrace();
         }

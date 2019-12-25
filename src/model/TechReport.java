@@ -1,8 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 //Required fields: author, title, institution, year
 //Optional fields: type, number, address, month, note, key
 public class TechReport extends Entry {
@@ -17,7 +14,7 @@ public class TechReport extends Entry {
         fieldTypeList.defineSingleOptionalFields(
                 FieldType.TYPE,
                 FieldType.NUMBER,
-                FieldType.ADDRES,
+                FieldType.ADDRESS,
                 FieldType.MONTH,
                 FieldType.NOTE,
                 FieldType.KEY);

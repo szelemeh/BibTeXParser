@@ -14,7 +14,7 @@ public class ArticleTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void addField_NotExistingField_ExceptionIsThrown() {
-        article.addField(FieldType.ADDRES, "");
+        article.addField(FieldType.ADDRESS, "");
     }
 
     @Test
@@ -25,6 +25,6 @@ public class ArticleTest {
     @Test
     public void areRequiredFieldPresent_NotPresent_False() {
         article.addField(FieldType.AUTHOR, "");
-        assertFalse(article.areRequiredFieldsPresent());
+        assertFalse(article.areRequiredFieldsPresent(null));
     }
 }

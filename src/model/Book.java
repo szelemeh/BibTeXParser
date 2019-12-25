@@ -12,7 +12,7 @@ public class Book extends Entry {
 
         fieldTypeList.defineSingleOptionalFields(
                 FieldType.SERIES,
-                FieldType.ADDRES,
+                FieldType.ADDRESS,
                 FieldType.EDITION,
                 FieldType.MONTH,
                 FieldType.NOTE,

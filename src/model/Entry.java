@@ -50,11 +50,15 @@ public abstract class Entry {
      */
     private void checkFitnessOfField(FieldType type) {
         if(!fieldTypeList.doesFieldExist(type))
-            throw new IllegalArgumentException("Field is not appropriate for this entry!");
+            throw new IllegalArgumentException("Field "+type+" is not appropriate for "+this.type+"!");
         FieldType partner = fieldTypeList.getPartnerOfField(type);
         if(partner != null){
             if(fields.containsKey(partner))
-                throw new IllegalArgumentException("This entry already has an alternative field!");
+                throw new IllegalArgumentException(
+                        "This "+this.type
+                        +":"+this.key
+                        +" already has an alternative field: "+partner
+                        +". You tried to add: "+type);
         }
     }
 
@@ -64,7 +68,7 @@ public abstract class Entry {
      *                        when checking whether required fields are present in this entry.
      * @return a <code>Boolean</code> that says whether all required fields are present
      */
-    protected Boolean areRequiredFieldsPresent(Entry crossReferenced) {
+    public Boolean areRequiredFieldsPresent(Entry crossReferenced) {
         if(crossReferenced != null)return fieldTypeList.areRequiredFieldsPresentIn(fields, crossReferenced);
         return fieldTypeList.areRequiredFieldsPresentIn(fields);
     }

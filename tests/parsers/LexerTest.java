@@ -11,9 +11,9 @@ public class LexerTest {
     String content;
 
     public LexerTest() {
-        FileToString reader = new FileToString();
+        FileToString reader = new FileToString("tests/resourses/example.bib");
         try {
-            content = reader.getContent("tests/resourses/example.bib");
+            content = reader.getContent();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -23,6 +23,5 @@ public class LexerTest {
     @Test
     public void buildEntries() {
         lexer = new Lexer(content);
-        lexer.buildEntries();
     }
 }

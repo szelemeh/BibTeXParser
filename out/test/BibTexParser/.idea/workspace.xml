@@ -2,26 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/ParsingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/StringNotDefinedException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/EntryFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/EntryFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/Printer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Booklet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Booklet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Conference.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Conference.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/FieldType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/FieldType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/FieldTypeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/FieldTypeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Inbook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Inbook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Incollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Incollection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Inproceedings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Inproceedings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Manual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Manual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/MastersThesis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/MastersThesis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/PhdThesis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/PhdThesis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Proceedings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Proceedings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/TechReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/TechReport.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/NameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/NameParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/MastersThesis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/DocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/DocumentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/EntryFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/ArticleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/ArticleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/BookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/BookTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/FieldPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/FieldType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/FieldType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/resourses/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/resourses/example.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/tests/resourses/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/tests/resourses/example.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/EntryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Booklet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Booklet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Conference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Conference.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Entry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FieldType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FieldType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FieldTypeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FieldTypeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Inbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Inbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Incollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Incollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Inproceedings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Inproceedings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Manual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Manual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MastersThesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MastersThesis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PhdThesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PhdThesis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Proceedings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Proceedings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TechReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TechReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/FileToString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/FileToString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsers/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/NameParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/NameParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/EntryFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/EntryFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model/ArticleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model/ArticleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/parsers/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/parsers/LexerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/resourses/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resourses/example.bib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +115,8 @@
       <recent name="model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="parsers" />
       <recent name="" />
+      <recent name="parsers" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -93,9 +137,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.LexerTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BibTeXParser" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,7 +158,7 @@
       <module name="BibTeXParser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parsers.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,7 +174,7 @@
       <module name="BibTeXParser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parsers.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,7 +189,7 @@
       <module name="BibTeXParser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parsers.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,8 +203,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.LexerTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.FileReaderTest.getContent" />
         <item itemvalue="JUnit.DocumentTest" />
         <item itemvalue="JUnit.NameParserTest.getLastNames" />
@@ -192,7 +236,8 @@
       <workItem from="1576768802635" duration="28000" />
       <workItem from="1576941115680" duration="449000" />
       <workItem from="1577092109741" duration="28447000" />
-      <workItem from="1577207608622" duration="9549000" />
+      <workItem from="1577207608622" duration="11707000" />
+      <workItem from="1577274583375" duration="10992000" />
     </task>
     <servers />
   </component>
@@ -211,17 +256,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/parsers/Lexer.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BibTexParser$LexerTest.ic" NAME="LexerTest Coverage Results" MODIFIED="1577138996814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

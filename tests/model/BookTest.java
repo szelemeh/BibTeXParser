@@ -31,6 +31,6 @@ public class BookTest {
     @Test
     public void areRequiredFieldPresent_NotPresent_False() {
         book.addField(FieldType.AUTHOR, "");
-        assertFalse(book.areRequiredFieldsPresent());
+        assertFalse(book.areRequiredFieldsPresent(null));
     }
 }

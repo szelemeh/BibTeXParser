@@ -1,8 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 //Required fields: author/editor, title, chapter/pages, publisher, year
 //Optional fields: volume/number, series, type, address, edition, month, note, key
 public class Inbook extends Entry{
@@ -12,6 +9,15 @@ public class Inbook extends Entry{
                 FieldType.TITLE,
                 FieldType.PUBLISHER,
                 FieldType.YEAR);
+
+        fieldTypeList.defineSingleOptionalFields(
+                FieldType.SERIES,
+                FieldType.TYPE,
+                FieldType.ADDRESS,
+                FieldType.EDITION,
+                FieldType.MONTH,
+                FieldType.NOTE,
+                FieldType.KEY);
 
         fieldTypeList.defineDuplexRequiredFields(
                 new FieldPair(FieldType.AUTHOR, FieldType.EDITOR),
