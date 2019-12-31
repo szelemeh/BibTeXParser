@@ -69,27 +69,40 @@ public class FieldTypeList implements IFieldTypeList {
     }
 
     @Override
-    public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields) {
+    public ArrayList<FieldType> getMissingRequiredFieldTypes(EnumMap<FieldType, String> fields) {
+        ArrayList<FieldType> missingFields = new ArrayList<>();
         for(FieldType type: singleRequired){
-            if(!fields.containsKey(type))return false;
+            if(!fields.containsKey(type))missingFields.add(type);
         }
         for(FieldPair pair: duplexRequired){
-            if(!fields.containsKey(pair.first) && !fields.containsKey(pair.second))return false;
+            if(!fields.containsKey(pair.first) && !fields.containsKey(pair.second)) {
+                missingFields.add(pair.first);
+                missingFields.add(pair.second);
+            }
         }
-        return true;
+        if (missingFields.isEmpty()) return null;
+        return missingFields;
     }
 
-    public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields, Entry crossReferenced) {
-        if(crossReferenced == null)return areRequiredFieldsPresentIn(fields);
-        
+    public ArrayList<FieldType> getMissingRequiredFieldTypes(EnumMap<FieldType, String> fields, Entry crossReferenced) {
+        if (crossReferenced == null) return getMissingRequiredFieldTypes(fields);
+
+        ArrayList<FieldType> missingFields = new ArrayList<>();
+
         EnumMap<FieldType, String> crossFields = crossReferenced.fields;
+
         for(FieldType type: singleRequired){
-            if(!fields.containsKey(type) && !crossFields.containsKey(type))return false;
+            if(!fields.containsKey(type) && !crossFields.containsKey(type)) missingFields.add(type);
         }
         for(FieldPair pair: duplexRequired){
             if((!fields.containsKey(pair.first) && !fields.containsKey(pair.second))
-                    && (!crossFields.containsKey(pair.first) && !crossFields.containsKey(pair.second)))return false;
+                    && (!crossFields.containsKey(pair.first) && !crossFields.containsKey(pair.second))) {
+
+                missingFields.add(pair.first);
+                missingFields.add(pair.second);
+            }
         }
-        return true;
+        if (missingFields.isEmpty()) return null;
+        return missingFields;
     }
 }

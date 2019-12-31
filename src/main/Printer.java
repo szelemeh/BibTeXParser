@@ -14,6 +14,12 @@ public class Printer {
         header.append(String.format("| %-85s |%n",entry.type+"("+entry.getKey()+")"));
         header.append(String.format("+------------------------+--------------------------------------------------------------+%n"));
 
+        if (entry.getCrossRef() != null) {
+            header.append(String.format(leftAlignFormat, "CROSSREF", entry.getCrossRef()));
+            header.append(String.format("+------------------------+--------------------------------------------------------------+%n"));
+        }
+
+
         StringBuilder body = new StringBuilder();
         int i = 1;
         int length = entry.getFields().size();

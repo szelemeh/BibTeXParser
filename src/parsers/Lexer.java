@@ -3,6 +3,7 @@ package parsers;
 import Exceptions.ParsingException;
 import Exceptions.StringNotDefinedException;
 import main.EntryFactory;
+import main.User;
 import model.Entry;
 import model.EntryType;
 import model.FieldType;
@@ -95,8 +96,8 @@ public class Lexer {
      */
     private void buildString(String rawString) {
         StringBuilder newStringBuilder = new StringBuilder();
-        int start = fromLeftFirstIndexOf(rawString, '{');
-        int end = fromRightFirstIndexOf(rawString, '}');
+        int start = rawString.indexOf('{');
+        int end = rawString.lastIndexOf('}');
 
         if (start == -1 || end == -1) throw new IllegalArgumentException("A String must by enclosed in curly braces {}");
 
@@ -169,14 +170,14 @@ public class Lexer {
     private void buildEntry(EntryType type, String rawEntry) {
 
         Entry entry = EntryFactory.create(type);
-        int start = fromLeftFirstIndexOf(rawEntry, '{');
-        int end = fromRightFirstIndexOf(rawEntry, '}');
+        int start = rawEntry.indexOf('{');
+        int end = rawEntry.lastIndexOf('}');
 
         if (start == -1 || end == -1) throw new IllegalArgumentException("An Entry must by enclosed in curly braces {}");
 
         rawEntry = rawEntry.substring(start+1, end); //getting rid of entry name and outer braces
 
-        int i = fromLeftFirstIndexOf(rawEntry, ',');
+        int i = rawEntry.indexOf(',');
 
         assert entry != null;
         entry.setKey(rawEntry.substring(0, i)
@@ -224,38 +225,20 @@ public class Lexer {
                     }
                 }
                 String value = rawValue;
-                if(fieldType == FieldType.CROSSREF)entry.setCrossRef(value);
-                else entry.addField(fieldType, value);
+                if(fieldType == FieldType.CROSSREF)entry.setCrossRef(value.toLowerCase());
+                else {
+                    try {
+                        entry.addField(fieldType, value);
+                    }
+                    catch (IllegalArgumentException ex) {
+                        User.getUser().sendMessage(ex.getMessage());
+                    }
+                }
 
             }
         }
         entries.add(entry);
 
-    }
-
-    /**
-     * Method that returns index of the first occurrence of character in source string 
-     * starting from beginning of source.
-     * @param source is string in which we look for the pattern.
-     * @param c is char which we are looking for in source.
-     * @return index of first character of pattern found in source, -1 if index was not found.
-     */
-    private int fromLeftFirstIndexOf(String source, char c) {
-        return source.indexOf(c);
-    }
-
-    /**
-     * Method that returns index of the first occurrence of c in source string.
-     * starting from end of source.
-     * @param source is string in which we look for the pattern.
-     * @param c is string index of which the method returns.
-     * @return index of last character of pattern found in source, -1 if index was not found.
-     */
-    private int fromRightFirstIndexOf(String source, char c) {
-        int index;
-        for (index=source.length()-1; index>=0 && source.charAt(index) != c; index--);
-        if(source.charAt(index) == c)return index;
-        else return -1;
     }
 
     private String clearSidesOfString(String s) {

@@ -9,35 +9,44 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 
 public class Document {
-    private EnumMap<EntryType, ArrayList<Entry>> entries;
-    private final String filePath;
+    private EnumMap<EntryType, ArrayList<Entry>> entries = new EnumMap<EntryType, ArrayList<Entry>>(EntryType.class);
+    private String filePath;
     private Parser parser;
-    private Printer printer;
+    private Printer printer = new Printer();
     private User user = User.getUser();
+
+    public Document() {
+    }
 
     public Document(String filePath) {
         this.filePath = filePath;
         parser = new Parser(filePath);
-        printer = new Printer();
-        entries = new EnumMap<EntryType, ArrayList<Entry>>(EntryType.class);
         fillEntries();
     }
 
     private void fillEntries() {
+        // TODO: 31-Dec-19 check if filePath is valid
         ArrayList<Entry> allEntries = parser.getEntries();
+
         for (Entry entry: allEntries) {
-            if(!entry.areRequiredFieldsPresent(getCrossReferencedEntry(entry.getCrossRef()))){
-                user.sendMessage(entry.type+":"+entry.getKey()+" is missing some required fields!");
-            }
             put(entry);
         }
     }
 
+    private void checkEntry(Entry entry) {
+        ArrayList<FieldType> missingFields = entry.getMissingFieldTypes(getCrossReferencedEntry(entry.getCrossRef()));
+        if(missingFields != null) {
+            user.sendMessage(entry.type + ":" + entry.getKey() + " is missing these required fields: " + missingFields.toString());
+        }
+    }
+
     public void put(Entry entry) {
+
         if(!entries.containsKey(entry.type)) {
             entries.put(entry.type, new ArrayList<>());
         }
         entries.get(entry.type).add(entry);
+
     }
 
     public void printEntriesByField(FieldType fieldType, String value) {
@@ -60,7 +69,7 @@ public class Document {
                 }
             }
         }
-        if(toPrint.isEmpty())user.sendMessage("There are no entries with author or editor last name "+searchLastName);
+        if(toPrint.isEmpty())user.sendMessage("There are no entries with author or editor last name " + searchLastName);
         else printer.printAll(toPrint);
     }
 
@@ -78,8 +87,9 @@ public class Document {
         }
     }
 
-    private Entry getCrossReferencedEntry(String crossRef) {
+    public Entry getCrossReferencedEntry(String crossRef) {
         if (crossRef == null) return null;
+
         ArrayList<ArrayList<Entry>> allArrayLists = new ArrayList<>(this.entries.values());
 
         for (ArrayList<Entry> array: allArrayLists) {
@@ -88,6 +98,17 @@ public class Document {
             }
         }
         return null;
+    }
+
+
+    public void checkAllEntries() {
+        ArrayList<ArrayList<Entry>> allArrayLists = new ArrayList<>(this.entries.values());
+
+        for (ArrayList<Entry> array: allArrayLists) {
+            for (Entry entry: array) {
+                checkEntry(entry);
+            }
+        }
     }
 
 

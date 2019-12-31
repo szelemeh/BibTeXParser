@@ -1,11 +1,12 @@
 import main.Document;
 import model.*;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class DocumentTest {
     Document document;
     public DocumentTest() {
-        document = new Document("//");
+        document = new Document();
         //Article:
         //  Required fields: author, title, journal, year, volume
         //  Optional fields: number, pages, month, doi, note, key
@@ -48,5 +49,29 @@ public class DocumentTest {
     public void printEntriesByEntryType() {
         System.out.println("printEntriesByEntryType(): EntryType.Article");
         document.printEntriesByEntryType(EntryType.ARTICLE);
+    }
+
+    @Test
+    public void getCrossReferencedEntry() {
+        Document doc = new Document();
+        Article articleWhole = new Article();
+        articleWhole.addField(FieldType.AUTHOR, "First von Last");
+        articleWhole.addField(FieldType.TITLE, "Best article ever");
+        articleWhole.addField(FieldType.JOURNAL, "Observer");
+        articleWhole.addField(FieldType.YEAR, "1995");
+        articleWhole.addField(FieldType.VOLUME, "Big");
+        articleWhole.addField(FieldType.NOTE, "a good article");
+        articleWhole.setKey("article-whole");
+
+        Article articleCross = new Article();
+        articleCross.addField(FieldType.AUTHOR, "First von Last");
+        articleCross.addField(FieldType.TITLE, "Best article ever");
+        articleCross.addField(FieldType.JOURNAL, "Observer");
+        articleCross.setCrossRef("article-whole");
+
+        doc.put(articleWhole);
+        doc.put(articleCross);
+
+        assertEquals(articleWhole, doc.getCrossReferencedEntry(articleCross.getCrossRef()));
     }
 }

@@ -1,0 +1,36 @@
+@string{jan = "january"}
+@string{feb = "february"}
+@string{mar = "march"}
+@string{apr = "april"}
+@string{may = "may"}
+@string{jun = "june"}
+@string{jul = "july"}
+@string{aug = "august"}
+@string{sep = "september"}
+@string{oct = "october"}
+@string{nov = "november"}
+@string{dec = "december"}
+
+
+The KEY field is here to override the KEY field in the journal being
+cross referenced (so is the NOTE field, in addition to its imparting
+information).
+
+@ARTICLE{article-crossref,
+   crossref = "WHOLE-JOURNAL",
+   key = "",
+   author = "Leslie A. Aamport",
+   title = "The Gnats and Gnus main.Document Preparation System",
+   pages = "73+",
+   note = "This is a cross-referencing ARTICLE entry",
+}
+
+@ARTICLE{whole-journal,
+   key = "GAJ",
+   journal = "G-Animal's Journal",
+   year = "1986",
+   volume = "41",
+   number = "7",
+   month = jul,
+   note = "This entry is a cross-referenced ARTICLE (journal)",
+}

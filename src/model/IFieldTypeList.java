@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.EnumMap;
 
 public interface IFieldTypeList {
@@ -16,7 +17,7 @@ public interface IFieldTypeList {
     //returns null if field is single
     public FieldType getPartnerOfField(FieldType type);
 
-    public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields);
+    public ArrayList<FieldType> getMissingRequiredFieldTypes(EnumMap<FieldType, String> fields);
 
-    public Boolean areRequiredFieldsPresentIn(EnumMap<FieldType, String> fields, Entry crossReferenced);
+    public ArrayList<FieldType> getMissingRequiredFieldTypes(EnumMap<FieldType, String> fields, Entry crossReferenced);
 }

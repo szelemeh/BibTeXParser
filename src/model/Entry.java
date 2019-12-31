@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.Objects;
 
@@ -36,8 +37,7 @@ public abstract class Entry {
      * @throws IllegalArgumentException in case of field has already been added to this entry
      */
     public void addField(FieldType type, String value) throws IllegalArgumentException {
-        if(fields.containsKey(type)) throw new IllegalArgumentException("The field has already been added!");
-        checkFitnessOfField(type);
+        checkFitnessOfField(type, value);
         fields.put(type, value);
     }
 
@@ -48,7 +48,14 @@ public abstract class Entry {
      * @throws IllegalArgumentException when field was not found in neither required nor optional field types
      * and when this entry already has an alternative field
      */
-    private void checkFitnessOfField(FieldType type) {
+    private void checkFitnessOfField(FieldType type, String value) {
+        if(fields.containsKey(type))
+            throw new IllegalArgumentException(
+                    "The field " + type + " in entry " + this.type + ":" + this.getKey() + " has already been added! " +
+                            "\nIt holds value: \"" + fields.get(type)
+                            + "\". \nYou tried to change it to: \""
+                            + value +"\".");
+
         if(!fieldTypeList.doesFieldExist(type))
             throw new IllegalArgumentException("Field "+type+" is not appropriate for "+this.type+"!");
         FieldType partner = fieldTypeList.getPartnerOfField(type);
@@ -66,11 +73,10 @@ public abstract class Entry {
      * Method that checks whether all required fields are present in this entry
      * @param crossReferenced is entry that is being used as a reference for the required fields
      *                        when checking whether required fields are present in this entry.
-     * @return a <code>Boolean</code> that says whether all required fields are present
+     * @return an <code>ArrayList</code> with all missing types
      */
-    public Boolean areRequiredFieldsPresent(Entry crossReferenced) {
-        if(crossReferenced != null)return fieldTypeList.areRequiredFieldsPresentIn(fields, crossReferenced);
-        return fieldTypeList.areRequiredFieldsPresentIn(fields);
+    public ArrayList<FieldType> getMissingFieldTypes(Entry crossReferenced) {
+        return fieldTypeList.getMissingRequiredFieldTypes(fields, crossReferenced);
     }
 
     /**
