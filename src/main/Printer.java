@@ -2,6 +2,9 @@ package main;
 
 import model.Entry;
 import model.FieldType;
+import model.Name;
+import parsers.NameParser;
+import parsers.Parser;
 
 import java.util.ArrayList;
 
@@ -24,10 +27,14 @@ public class Printer {
         int i = 1;
         int length = entry.getFields().size();
         for (java.util.Map.Entry<FieldType, String> field : entry.getFields().entrySet()) {
-            String key = field.getKey().toString().toLowerCase();
-            String value = field.getValue();
-            body.append(String.format(leftAlignFormat, key, value));
-            if(i<length)body.append(String.format("+------------------------+--------------------------------------------------------------+%n"));
+            if (field.getKey() == FieldType.AUTHOR || field.getKey() == FieldType.EDITOR) {
+                body.append(getPrintableName(field.getKey(), field.getValue()));
+            } else {
+                String key = field.getKey().toString().toLowerCase();
+                String value = field.getValue();
+                body.append(String.format(leftAlignFormat, key, value));
+            }
+            if (i<length) body.append(String.format("+------------------------+--------------------------------------------------------------+%n"));
             i++;
         }
 
@@ -41,6 +48,44 @@ public class Printer {
 
         System.out.println(full);
     }
+
+    private String getPrintableName(FieldType key, String value) {
+        StringBuilder printableName = new StringBuilder();
+        ArrayList<Name> names = (ArrayList<Name>) new NameParser().getNames(value);
+
+        Name initialName = names.get(0);
+        removeTildas(initialName);
+
+        printableName.append(String.format(
+                leftAlignFormat, key.toString(), "- "+initialName.getFirstName()+" "+initialName.getLastName()
+        ));
+        names.remove(initialName);
+
+
+        for (Name name: names) {
+
+            removeTildas(name);
+
+            printableName.append(String.format(
+                    leftAlignFormat, "", "- "+name.getFirstName()+" "+name.getLastName()
+            ));
+        }
+
+        return printableName.toString();
+    }
+
+    private void removeTildas(Name name) {
+        name.setLastName(name.getLastName()
+                .replaceAll("~ ", "")
+                .replaceAll("~\\s", " ")
+                .replaceAll("~", " ")
+        );
+        name.setFirstName(name.getFirstName()
+                .replaceAll("~ ", "")
+                .replaceAll("~\\s", " ")
+                .replaceAll("~", " "));
+    }
+
     public void printAll(ArrayList<Entry> entries){
         for (Entry entry: entries) {
             printEntry(entry);

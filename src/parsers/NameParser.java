@@ -105,8 +105,16 @@ public class NameParser {
         //getting to the beginning of von and building firstName
         int i;
         for(i=0; i<words.size() && isCapitalized(words.get(i)); i++) {
-            firstName.append(words.get(i));
-            firstName.append("~");
+            if (i == words.size()-1) {
+                lastName.append(words.get(i));
+                lastName.append("~");
+                name.setFirstName(firstName.toString());
+                name.setLastName(lastName.toString());
+                return name;
+            } else {
+                firstName.append(words.get(i));
+                firstName.append("~");
+            }
         }
 
         //getting to the end of von
@@ -138,6 +146,7 @@ public class NameParser {
         return ( word.charAt(0) >= 'A' && word.charAt(0) <= 'Z' );
     }
     private Boolean isLowered(String word){
+        if(word == null) return false;
         return ( word.charAt(0) >= 'a' && word.charAt(0) <= 'z' );
     }
 }

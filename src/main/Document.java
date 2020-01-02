@@ -19,15 +19,19 @@ public class Document {
     }
 
     public Document(String filePath) {
+        // TODO: 31-Dec-19 check if filePath is valid
         this.filePath = filePath;
         parser = new Parser(filePath);
-        fillEntries();
+        ArrayList<Entry> allEntries = parser.getEntries();
+        fillEntries(allEntries);
     }
 
-    private void fillEntries() {
-        // TODO: 31-Dec-19 check if filePath is valid
-        ArrayList<Entry> allEntries = parser.getEntries();
+    public void addFile(String filePath) {
+        Parser parser = new Parser(filePath);
+        fillEntries(parser.getEntries());
+    }
 
+    private void fillEntries(ArrayList<Entry> allEntries) {
         for (Entry entry: allEntries) {
             put(entry);
         }
@@ -50,7 +54,7 @@ public class Document {
     }
 
     public void printEntriesByField(FieldType fieldType, String value) {
-        if(fieldType == FieldType.AUTHOR || fieldType == FieldType.EDITOR) printEntriesByLastName(value);
+        if(fieldType == FieldType.AUTHOR) printEntriesByLastName(value);
 
         //here to implement function for other fields
     }

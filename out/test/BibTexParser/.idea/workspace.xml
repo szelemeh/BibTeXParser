@@ -2,39 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3d91c6-701d-4c8d-8f59-f53d36df4626" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/main/DocumentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/resourses/ex.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Executor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Option.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/OptionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parsers/OptionsParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/ExecutorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/parsers/OptionsParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/stass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/stass.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/main/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/main/Document.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/main/Printer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/main/Printer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/main/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/main/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/FieldTypeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/FieldTypeList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/model/IFieldTypeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/model/IFieldTypeList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/Lexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BibTexParser/parsers/NameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BibTexParser/parsers/NameParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/.idea/dictionaries/stass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/.idea/dictionaries/stass.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/DocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/DocumentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/main/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/main/Document.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/main/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/main/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/model/Entry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/Lexer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/LexerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/LexerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/resourses/example.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/tests/resourses/example.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/parsers/NameParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/resourses/main_example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/resourses/main_example.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BibTexParser/tests/resourses/main_example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/BibTexParser/tests/resourses/main_example.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Document.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Entry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FieldTypeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FieldTypeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/IFieldTypeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/IFieldTypeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/parsers/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/parsers/LexerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/resourses/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resourses/main_example.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/NameParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/NameParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/parsers/NameParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/parsers/NameParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/resourses/main_example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resourses/main_example.bib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
         <option value="JUnit4 Test Class" />
       </list>
@@ -69,7 +63,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/tests" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tests/parsers" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -80,8 +74,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="main" />
       <recent name="parsers" />
+      <recent name="main" />
       <recent name="" />
       <recent name="model" />
     </key>
@@ -109,70 +103,83 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <option name="PROGRAM_PARAMETERS" value="--file C:\Users\stass\IdeaProjects\BibTexParser\tests\resourses\ex.bib" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BibTeXParser" />
+      <option name="PROGRAM_PARAMETERS" value="-f tests/resourses/main_example.bib -c" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocumentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExecutorTest.execute_all" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibTeXParser" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DocumentTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DocumentTest.getCrossReferencedEntry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BibTeXParser" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DocumentTest" />
-      <option name="METHOD_NAME" value="getCrossReferencedEntry" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.ExecutorTest" />
+      <option name="METHOD_NAME" value="execute_all" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileReaderTest.getContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExecutorTest.execute_category" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibTeXParser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="parsers" />
-      <option name="MAIN_CLASS_NAME" value="parsers.FileReaderTest" />
-      <option name="METHOD_NAME" value="getContent" />
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.ExecutorTest" />
+      <option name="METHOD_NAME" value="execute_category" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LexerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptionsParserTest.getOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BibTeXParser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="parsers" />
-      <option name="MAIN_CLASS_NAME" value="parsers.LexerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="parsers.OptionsParserTest" />
+      <option name="METHOD_NAME" value="getOptions" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.ExecutorTest.execute_all" />
+      <item itemvalue="JUnit.ExecutorTest.execute_category" />
+      <item itemvalue="JUnit.OptionsParserTest.getOptions" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.DocumentTest.getCrossReferencedEntry" />
-        <item itemvalue="JUnit.DocumentTest" />
-        <item itemvalue="JUnit.LexerTest" />
-        <item itemvalue="JUnit.FileReaderTest.getContent" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.OptionsParserTest.getOptions" />
+        <item itemvalue="JUnit.ExecutorTest.execute_all" />
+        <item itemvalue="JUnit.ExecutorTest.execute_category" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +210,9 @@
       <workItem from="1577092109741" duration="28447000" />
       <workItem from="1577207608622" duration="11707000" />
       <workItem from="1577274583375" duration="14330000" />
-      <workItem from="1577800816484" duration="9729000" />
+      <workItem from="1577800816484" duration="10518000" />
+      <workItem from="1577904491882" duration="10455000" />
+      <workItem from="1577981121378" duration="14450000" />
     </task>
     <servers />
   </component>
@@ -227,6 +236,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BibTexParser$Main.ic" NAME="Main Coverage Results" MODIFIED="1577997902399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BibTexParser$LexerTest.ic" NAME="LexerTest Coverage Results" MODIFIED="1577138996814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>parsers.*</FILTER>
     </SUITE>
