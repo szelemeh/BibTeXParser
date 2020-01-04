@@ -72,6 +72,6 @@ public class DocumentTest {
         doc.put(articleWhole);
         doc.put(articleCross);
 
-        assertEquals(articleWhole, doc.getCrossReferencedEntry(articleCross.getCrossRef()));
+        assertEquals(articleWhole, doc.getCrossreferencedEntry(articleCross.getCrossRef()));
     }
 }

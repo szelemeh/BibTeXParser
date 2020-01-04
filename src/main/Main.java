@@ -1,18 +1,25 @@
 package main;
 
-import parsers.OptionsParser;
+import parsers.CommandParser;
 
 import java.util.ArrayList;
 
+/**
+ * Main class that receives program arguments.
+ */
 public class Main {
 
+    /**
+     * Receives commands from an user and acts on them.
+     * @param args are arguments to the program.
+     */
     public static void main(String[] args) {
-        OptionsParser parser = new OptionsParser(args);
+        CommandParser parser = new CommandParser(args);
 
-        ArrayList<Option> options = parser.getOptions();
+        ArrayList<Command> commands = parser.getOptions();
 
-        Executor ex = new Executor();
+        Executor ex = Executor.getExecutor();
 
-        ex.execute(options);
+        ex.execute(commands);
     }
 }

@@ -6,9 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+/**
+ * NameParser parses the content of a BibTeX name which
+ * may be a value of author or editor field.
+ */
 public class NameParser {
 
-    //returns list of Name objects from value of editor or author field
+    //returns
+
+    /**
+     * Parses BibTeX name to an object representation of it.
+     * @param fieldValue is a raw value of some name field.
+     * @return list of Name objects from value of editor or author field
+     */
     public List<Name> getNames(String fieldValue) {
         List<Name> names = new ArrayList<>();
 
@@ -30,7 +40,14 @@ public class NameParser {
     }
 
 
-
+    /**
+     * Method takes one BibTeX name and parses it to return
+     * a Name instance.
+     * @param rawName is raw BibTeX name which contains one or two
+     *                commas depending whether jr part is present.
+     * @return object representation of BibTeX name.
+     * @see Name
+     */
     public Name parseRawNameWithCommas(String rawName) {
         Name name = new Name();
         StringBuilder firstName = new StringBuilder();
@@ -91,6 +108,16 @@ public class NameParser {
         return name;
     }
 
+    /**
+     * Similarly to <code>parseRawNameWithCommas(String rawName)</code>
+     * it parses BibTeX name to an object representation of it.
+     * The difference lies in the fact that <code>rawName</code> in
+     * this method does not contain commas which changes the way it should
+     * be parsed.
+     * @param rawName is raw BibTeX name which does not contain commas.
+     * @return an instance of <code>Name</code>
+     * @see Name
+     */
     public Name parseRawNameWithoutCommas(String rawName) {
         Name name = new Name();
         StringBuilder firstName = new StringBuilder();
@@ -141,10 +168,22 @@ public class NameParser {
         return name;
     }
 
+    /**
+     * Checks if <code>word</code> is capitalized.
+     * @param word is a word to be checked.
+     * @return true if first letter of <code>word</code>
+     * is capitalized, false otherwise.
+     */
     private Boolean isCapitalized(String word){
         if(word == null) return false;
         return ( word.charAt(0) >= 'A' && word.charAt(0) <= 'Z' );
     }
+    /**
+     * Checks if <code>word</code> is lowered.
+     * @param word is a word to be checked.
+     * @return true if first letter of <code>word</code>
+     * is written in lowercase, false otherwise.
+     */
     private Boolean isLowered(String word){
         if(word == null) return false;
         return ( word.charAt(0) >= 'a' && word.charAt(0) <= 'z' );

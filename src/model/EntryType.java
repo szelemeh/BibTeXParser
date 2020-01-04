@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * This enum holds all possible entry types (categories).
+ */
 public enum EntryType {
     ARTICLE,
     BOOK,

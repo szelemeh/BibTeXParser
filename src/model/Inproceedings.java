@@ -2,6 +2,9 @@ package model;
 
 ////Required fields: author, title, booktitle, year
 ////Optional fields: editor, volume/number, series, pages, address, month, organization, publisher, note, key
+/**
+ * @see Entry
+ */
 public class Inproceedings extends Entry {
     public Inproceedings() {
         super(EntryType.INPROCEEDINGS);

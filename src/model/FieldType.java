@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * This enum holds all possible field types.
+ */
 public enum FieldType {
     ADDRESS,
     ANNOTE,

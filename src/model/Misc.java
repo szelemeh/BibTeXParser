@@ -2,6 +2,9 @@ package model;
 
 //Required fields: none
 //Optional fields: author, title, howpublished, month, year, note, key
+/**
+ * @see Entry
+ */
 public class Misc extends Entry {
     public Misc() {
         super(EntryType.MISC);

@@ -1,17 +1,16 @@
 package parsers;
 
-import main.Option;
-import main.OptionType;
+import main.Command;
+import main.CommandType;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
-public class OptionsParserTest {
+public class CommandParserTest {
     private final String pathToFile = "C:\\Users\\stass\\IdeaProjects\\BibTexParser\\tests\\resourses\\ex.bib";
-    private OptionsParser parser;
+    private CommandParser parser;
 
     @Test
     public void getOptions() {
@@ -19,15 +18,15 @@ public class OptionsParserTest {
 
         args = new ArrayList<>();
         args.add(pathToFile);
-        Option opt1 = new Option(OptionType.FILE, args);
+        Command opt1 = new Command(CommandType.FILE, args);
 
         args = new ArrayList<>();
         args.add("inbook");
-        Option opt2 = new Option(OptionType.CATEGORY, args);
+        Command opt2 = new Command(CommandType.CATEGORY, args);
 
         args = new ArrayList<>();
         args.add("Knuth");
-        Option opt3 = new Option(OptionType.AUTHOR, args);
+        Command opt3 = new Command(CommandType.AUTHOR, args);
 
         String[] programArgs = new String[6];
         programArgs[0] = "--category";
@@ -37,11 +36,11 @@ public class OptionsParserTest {
         programArgs[4] = "--author";
         programArgs[5] = "Knuth";
 
-        parser = new OptionsParser(programArgs);
-        ArrayList<Option> parsedOptions = parser.getOptions();
+        parser = new CommandParser(programArgs);
+        ArrayList<Command> parsedCommands = parser.getOptions();
 
-        assertEquals(opt1, parsedOptions.get(0));
-        assertEquals(opt2, parsedOptions.get(1));
-        assertEquals(opt3, parsedOptions.get(2));
+        assertEquals(opt1, parsedCommands.get(0));
+        assertEquals(opt2, parsedCommands.get(1));
+        assertEquals(opt3, parsedCommands.get(2));
     }
 }

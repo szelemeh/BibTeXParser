@@ -2,6 +2,9 @@ package model;
 
 //Required fields: title
 //Optional fields: author, howpublished, address, month, year, note, key
+/**
+ * @see Entry
+ */
 public class Booklet extends Entry{
     public Booklet() {
         super(EntryType.BOOKLET);

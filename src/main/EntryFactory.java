@@ -2,7 +2,18 @@ package main;
 
 import model.*;
 
+/**
+ * Factory design pattern.
+ * EntryFactory is class that creates entries.
+ */
 public class EntryFactory {
+    /**
+     * Method that creates and returns new Entry based on parameter type.
+     * @param type is an entry type(category)
+     * @return <code>Entry</code>
+     * @see Entry
+     * @see EntryType
+     */
     public static Entry create(EntryType type) {
         switch(type) {
             case ARTICLE:

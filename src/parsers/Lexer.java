@@ -24,7 +24,7 @@ public class Lexer {
     private ArrayList<Entry> entries;
 
     /**
-     * gets entries
+     * Gets entries.
      * @return list of entries built from fileContent
      */
     public ArrayList<Entry> getEntries() {
@@ -231,7 +231,7 @@ public class Lexer {
                         entry.addField(fieldType, value);
                     }
                     catch (IllegalArgumentException ex) {
-                        User.getUser().sendMessage(ex.getMessage());
+                        User.getUser().printMessage(ex.getMessage());
                     }
                 }
 
@@ -241,6 +241,12 @@ public class Lexer {
 
     }
 
+    /**
+     * Method that removes all whitespaces at the
+     * beginning and end of a <code>String</code>
+     * @return Same <code>String</code> without whitespaces
+     * at the beginning and end.
+     */
     private String clearSidesOfString(String s) {
         int i,j;
         for (i=0; i<s.length() && s.charAt(i) == ' '; i++);

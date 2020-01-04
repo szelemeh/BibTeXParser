@@ -2,6 +2,9 @@ package model;
 
 //Required fields: author, title, school, year
 //Optional fields: type, address, month, note, key
+/**
+ * @see Entry
+ */
 public class PhdThesis extends Entry {
     public PhdThesis() {
         super(EntryType.PHDTHESIS);
