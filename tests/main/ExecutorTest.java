@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 public class ExecutorTest {
-    Executor ex = new Executor();
+    Executor ex = Executor.getExecutor();
 
     @Test
     public void execute_help() {

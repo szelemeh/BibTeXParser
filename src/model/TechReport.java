@@ -1,8 +1,7 @@
 package model;
 
-//Required fields: author, title, institution, year
-//Optional fields: type, number, address, month, note, key
-/**
+/**Required fields: author, title, institution, year
+ * Optional fields: type, number, address, month, note, key
  * @see Entry
  */
 public class TechReport extends Entry {

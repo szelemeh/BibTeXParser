@@ -1,8 +1,7 @@
 package model;
 
-//Required fields: author, title, booktitle, publisher, year
-//Optional fields: editor, volume/number, series, type, chapter, pages, address, edition, month, note, key
-/**
+/**Required fields: author, title, booktitle, publisher, year
+ * Optional fields: editor, volume/number, series, type, chapter, pages, address, edition, month, note, key
  * @see Entry
  */
 public class Incollection extends Entry{

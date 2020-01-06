@@ -1,8 +1,7 @@
 package model;
 
-//Required fields: title, year
-//Optional fields: editor, volume/number, series, address, month, publisher, organization, note, key
-/**
+/**Required fields: title, year
+ * Optional fields: editor, volume/number, series, address, month, publisher, organization, note, key
  * @see Entry
  */
 public class Proceedings extends Entry {

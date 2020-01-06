@@ -173,6 +173,24 @@ public class CommandParser {
      * @return <code>true</code> if file exist, <code>false</code> otherwise.
      */
     private boolean fileExist(String path) {
+        int indexOfStartOfFileFormat = path.lastIndexOf('.');
+
+        if (indexOfStartOfFileFormat == -1) {
+            User.getUser().printMessage(User.MessageType.DANGER,
+                    "Please provide file with the .bib format!"
+            );
+            System.exit(1);
+        }
+
+        String fileFormat = path.substring(indexOfStartOfFileFormat);
+
+        if (!fileFormat.equals(".bib")) {
+            User.getUser().printMessage(User.MessageType.DANGER,
+                    "Please provide file with the .bib format!"
+            );
+            System.exit(1);
+        }
+
         File tempFile = new File(path);
         return tempFile.exists();
     }

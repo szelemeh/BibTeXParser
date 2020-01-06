@@ -3,7 +3,6 @@ package main;
 import model.*;
 
 /**
- * Factory design pattern.
  * EntryFactory is class that creates entries.
  */
 public class EntryFactory {

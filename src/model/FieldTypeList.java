@@ -124,7 +124,7 @@ public class FieldTypeList {
     }
 
     /**
-     * Similarly to <code>getMissingRequiredFieldTypes(EnumMap<FieldType, String> fields)</code>
+     * Similarly to <code>getMissingRequiredFieldTypes(fields)</code>
      * it checks if the entry contains all required fields but this method in case if
      * it does not find field type in the entry in looks for the field in the
      * <code>crossReferenced</code> entry.

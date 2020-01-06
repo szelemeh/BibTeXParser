@@ -6,7 +6,7 @@ import model.FieldType;
 import java.util.ArrayList;
 
 /**
- * Executor is singleton class that performs the task of the program.
+ * Executor is singleton class that performs the tasks of the program.
  */
 public class Executor {
     private Document doc;
@@ -19,7 +19,7 @@ public class Executor {
     private Executor() {}
 
     /**
-     * Method that go through each option and performs
+     * Method that go through each command and performs
      * the task given in it.
      * @param commands is a list of things the program needs to do.
      */

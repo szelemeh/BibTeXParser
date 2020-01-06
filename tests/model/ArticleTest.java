@@ -25,6 +25,6 @@ public class ArticleTest {
     @Test
     public void areRequiredFieldPresent_NotPresent_False() {
         article.addField(FieldType.AUTHOR, "");
-        assertFalse(article.areRequiredFieldsPresent(null));
+        assertEquals(0, article.getMissingFieldTypes(null).size());
     }
 }

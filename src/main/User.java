@@ -66,7 +66,8 @@ public class User {
 
     /**
      * Method that prints info message to console.
-     * @param message
+     * @param message is a text that user os going to see
+     *                in console.
      */
     public void printMessage(String message) {
         printMessage(MessageType.INFO, message);

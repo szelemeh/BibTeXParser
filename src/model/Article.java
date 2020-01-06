@@ -1,9 +1,8 @@
 package model;
 
-//Required fields: author, title, journal, year, volume
-//Optional fields: number, pages, month, doi, note, key
-
 /**
+ * Required fields: author, title, journal, year, volume
+ * Optional fields: number, pages, month, doi, note, key
  * @see Entry
  */
 public class Article extends Entry{

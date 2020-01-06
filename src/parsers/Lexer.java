@@ -1,7 +1,7 @@
 package parsers;
 
-import Exceptions.ParsingException;
-import Exceptions.StringNotDefinedException;
+import exceptions.ParsingException;
+import exceptions.StringNotDefinedException;
 import main.EntryFactory;
 import main.User;
 import model.Entry;
@@ -49,7 +49,14 @@ public class Lexer {
     public void buildEntries() {
         if (fileContent == null)return;
 
-        fileContent = fileContent.substring(fileContent.indexOf("@"));
+        int indexOfStartOfFirstEntry = fileContent.indexOf("@");
+        if (indexOfStartOfFirstEntry == -1) {
+            User.getUser().printMessage(
+                    "The file you specified has no entries!"
+            );
+            System.exit(1);
+        }
+        fileContent = fileContent.substring(indexOfStartOfFirstEntry);
         StringTokenizer mainTokenizer = new StringTokenizer(fileContent, "@");
         while (mainTokenizer.hasMoreTokens()) {
             StringBuilder entryTypeNameBuilder = new StringBuilder();

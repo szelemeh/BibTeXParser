@@ -1,8 +1,7 @@
 package model;
 
-//Required fields: title
-//Optional fields: author, organization, address, edition, month, year, note, key
-/**
+/**Required fields: title
+ * Optional fields: author, organization, address, edition, month, year, note, key
  * @see Entry
  */
 public class Manual extends Entry{

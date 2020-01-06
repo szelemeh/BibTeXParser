@@ -27,10 +27,10 @@ public class Name {
 
     /**
      * Constructs a full name.
-     * @param firstName
-     * @param lastName
-     * @param von
-     * @param jr
+     * @param firstName is a first name.
+     * @param lastName is a last name
+     * @param von is a von part
+     * @param jr is a jr part.
      */
     public Name(String firstName, String lastName, String von, String jr) {
         this.firstName = firstName;

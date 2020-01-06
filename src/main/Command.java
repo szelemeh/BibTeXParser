@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 /**
- * Option is a container for user command
+ * Command holds information about user task.
  */
 public class Command {
     /**

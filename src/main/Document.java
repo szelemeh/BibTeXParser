@@ -11,8 +11,7 @@ import java.util.EnumMap;
 
 
 /**
- * The <code>Document</code> is a container and for BibTeX entries.
- * It performs printing of desired entries.
+ * The <code>Document</code> is a container for BibTeX entries. It performs printing of desired entries.
  */
 public class Document {
     /**

@@ -11,8 +11,8 @@ public class FieldPair{
 
     /**
      * Constructs a pair of fields.
-      * @param first
-     * @param second
+      * @param first is a member of pair.
+     * @param second is a member of pair.
      */
     public FieldPair(FieldType first, FieldType second) {
         this.first = first;

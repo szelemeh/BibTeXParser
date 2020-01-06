@@ -1,7 +1,7 @@
-package Exceptions;
+package exceptions;
 
 /**
- * Thrown to indicate that a parsing error occurred
+ * Thrown to indicate that a parsing error occurred.
  */
 public class ParsingException extends Exception{
     public ParsingException(String message) {

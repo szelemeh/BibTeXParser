@@ -3,9 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-//Required fields: author, title, note
-//Optional fields: month, year, key
-/**
+/**Required fields: author, title, note
+ * Optional fields: month, year, key
  * @see Entry
  */
 public class Unpublished extends Entry {
